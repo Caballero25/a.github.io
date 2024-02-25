@@ -1,0 +1,260 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+/* Estilos del menú de navegación */
+nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #014257;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.logo-container img {
+    width: 120px;
+    /* Tamaño de la imagen */
+    margin-right: 10px;
+}
+
+.logo-container p {
+    margin-top: 10%;
+    color: white;
+    font-size: 40px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    margin-right: 30px;
+}
+
+.menu li {
+    margin-left: 40px;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.menu li:last-child:hover {
+    text-decoration: none;
+}
+
+.menu li:nth-child(4):hover {
+    text-decoration: none;
+}
+
+.menu li a {
+    color: #fff;
+    /* Color del texto del menú */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu li a.liContacto {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 7%;
+    color: black;
+    transition: 0.5s;
+}
+
+.menu li a.liContacto:hover {
+    background-color: #0799b6;
+    border-radius: 10%;
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos del menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    text-align: center;
+    border-radius: 2%;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    /* Color de fondo del menú desplegable */
+    min-width: 180px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a.desplegable {
+    border-bottom: 1px solid black;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    transition: 0.52s;
+}
+
+.dropdown-content:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #fbfbfb;
+    font-weight: bold;
+    box-shadow: inset 0 0 30px #f2e6cf;
+}
+
+.dropdown-content:hover > :first-child {
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+.title-text {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    padding-bottom: 20px;
+    height: 40px;
+    background-color: #0799b6;
+    text-align: center;
+}
+
+.title-text p {
+    color: white;
+    font-size: 24px;
+}
+
+.menuResponsive {
+    display: none;
+}
+
+/* Media query para hacer que el menú sea desplegable en pantallas más pequeñas */
+@media only screen and (max-width: 1000px) {
+    .logo-container img {
+        width: 100px;
+        /* Tamaño de la imagen */
+        margin-right: 10px;
+    }
+    .logo-container p {
+        margin-top: 23px;
+        margin-left: -10px;
+        font-size: 25px;
+    }
+    .menu li {
+        margin-left: 21px;
+    }
+    .dropdown-content {
+        min-width: 140px;
+    }
+    .menu li a.liContacto {
+        margin-right: -20px;
+        padding: 5px 10px;
+    }
+    .menu li a {
+        font-size: 16px;
+    }
+    .title-text p {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (max-width: 702px) {
+    .responsivePhone {
+        display: none;
+    }
+    .menuResponsive {
+        display: block;
+        justify-content: center;
+    }
+    .logo-container img {
+        width: 120px;
+        /* Tamaño de la imagen */
+        margin-right: 10px;
+    }
+    .logo-container p {
+        margin-top: 31px;
+        margin-left: -10px;
+        font-size: 25px;
+    }
+    .menu > li:nth-child(-n+4) {
+        display: none;
+    }
+    .menu > :last-child {
+        margin-top: 3px;
+    }
+    .navigator {
+        justify-content:space-between;
+    }
+    @media only screen and (max-width: 480px) {
+        .title-text p {
+            font-size: 14px;
+        }
+        .responsivePhone {
+            display: block;
+            border-bottom: 1px solid black;
+        }
+        .responsiveDesktop {
+            display: none;
+        }
+        .menu li div a.liContacto {
+            border-radius: 0%;
+            background-color: #014257;
+            color: white;
+            padding: 8px 5px;
+            width: 100%;
+        }
+        .menu li div a.liContacto:hover {
+            border-radius: 0%;
+            color: black;
+        }
+    }
+    @media only screen and (max-width: 365px) {
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-container img {
+            width: 80px;
+            /* Tamaño de la imagen */
+        }
+        
+        .logo-container p {
+            margin-top: 10%;
+            color: white;
+            font-size: 20px;
+        }
+        .dropdown-content {
+            min-width: 130px;
+        }
+    }
+    @media only screen and (max-width: 285px) {
+        .dropdown-content {
+            min-width: 100px;
+        }
+        .title-text {
+            padding-bottom: 30px;
+        }
+        .title-text p{
+            font-size: 12px;
+        }
+        .menu li div a.liContacto {
+            font-size: 12.5px;
+        }
+    }
+}
+

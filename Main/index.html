@@ -4,20 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/nav.css">
     <title>CEAC</title>
 </head>
 
 <body>
 
     <header>
-        <nav>
-            <ul>
+        <nav class="navigator">
+            <div class="logo-container">
+                <img src="https://media.discordapp.net/attachments/1085674144538034228/1211031173535367188/image.png?ex=65ecb7ab&is=65da42ab&hm=42e5b374bc4afbd37077e352e3d8711f848fc74b17195d73fef9757b460fc4ce&=&format=webp&quality=lossless" alt="Logo">
+                <p>CEAC</p>
+            </div>
+            <ul class="menu">
                 <li><a href="#" onclick="cargarContenido(event, 'Templates/inicio')">Inicio</a></li>
                 <li><a href="#" onclick="cargarContenido(event,'Templates/conocenos')">Conócenos</a></li>
-                <li><a href="#" onclick="cargarContenido(event,'Templates/preguntasfrecuentes')">Preguntas frecuentes</a></li>
-                <li><a href="#" target="_blank" id="iniciarConversacion">Contacto</a></li>
+                <li><a href="#" onclick="cargarContenido(event,'Templates/preguntasfrecuentes')">FAQS</a></li>
+                <li class="dropdown">
+                    <a href="#" onclick="preventRedirection(event)">Áreas de Servicio &#9660;</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="desplegable">Derecho</a>
+                        <a href="#" class="desplegable">Arquitectura</a>
+                        <a href="#" class="desplegable">Software</a>
+                        <a href="#" class="desplegable">Medicina</a>
+                        <a href="#" class="desplegable">Contaduria</a>
+                        <a href="#" class="desplegable">Ingeniería</a>
+                        <a href="#" class="desplegable">Inglés</a>
+                    </div>
+                </li>
+                <!--Menú responsive-->
+                <li class="dropdown menuResponsive">
+                    <a href="#" onclick="preventRedirection(event)">Navegación &#9776;</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="desplegable" onclick="cargarContenido(event, 'Templates/inicio')">Inicio</a>
+                        <a href="#" class="desplegable" onclick="cargarContenido(event,'Templates/conocenos')">Conócenos</a>
+                        <a href="#" class="desplegable" onclick="cargarContenido(event,'Templates/preguntasfrecuentes')">FAQS</a>
+                        <a href="#" class="desplegable" onclick="cargarContenido(event,'Templates/servicios')">Aréas de servicio</a>
+                        <a href="#" class="liContacto responsivePhone iniciarConversacion" target="_blank">CONTÁCTANOS</a>
+                    </div>
+                </li>
+                <li><a href="#" class="liContacto responsiveDesktop iniciarConversacion" target="_blank">CONTÁCTANOS</a></li>
             </ul>
         </nav>
+        <div class="title-text">
+            <p>CENTRO DE SOLUCIONES ACADÉMICAS</p>
+        </div>
     </header>
 
 

@@ -44,7 +44,12 @@ if (seccionActual == null || seccionActual == ""){
       });
 }
 
+function preventRedirection(event){
+    event.preventDefault();
+}
 
 var enlaceWhatsapp = "https://wa.me/573155058792?text=Hola,%20me%20interesa%20obtener%20una%20cotizacion%20personalizada";
-var enlacePrincipal = document.getElementById("iniciarConversacion");
-enlacePrincipal.href = enlaceWhatsapp;
+var enlacesPrincipales = document.getElementsByClassName("iniciarConversacion");
+for (var i = 0; i < enlacesPrincipales.length; i++) {
+    enlacesPrincipales[i].href = enlaceWhatsapp;
+}
