@@ -1,4 +1,3 @@
-/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@ body {
     background-color: white;
 }
 
-/* Estilos del menú de navegación */
 nav {
     height: 100px;
     display: flex;
@@ -24,7 +22,6 @@ nav {
 
 .logo-container img {
     width: 120px;
-    /* Tamaño de la imagen */
     margin-right: 10px;
 }
 
@@ -59,7 +56,6 @@ nav {
 
 .menu li a {
     color: #fff;
-    /* Color del texto del menú */
     text-decoration: none;
     font-size: 20px;
 }
@@ -79,7 +75,7 @@ nav {
     text-decoration: none;
 }
 
-/* Estilos del menú desplegable */
+
 .dropdown {
     position: relative;
 }
@@ -90,7 +86,6 @@ nav {
     display: none;
     position: absolute;
     background-color: #ffffff;
-    /* Color de fondo del menú desplegable */
     min-width: 180px;
     z-index: 1;
 }
@@ -141,11 +136,9 @@ nav {
     display: none;
 }
 
-/* Media query para hacer que el menú sea desplegable en pantallas más pequeñas */
 @media only screen and (max-width: 1000px) {
     .logo-container img {
         width: 100px;
-        /* Tamaño de la imagen */
         margin-right: 10px;
     }
     .logo-container p {
@@ -181,7 +174,6 @@ nav {
     }
     .logo-container img {
         width: 120px;
-        /* Tamaño de la imagen */
         margin-right: 10px;
     }
     .logo-container p {
@@ -230,7 +222,6 @@ nav {
         
         .logo-container img {
             width: 80px;
-            /* Tamaño de la imagen */
         }
         
         .logo-container p {
